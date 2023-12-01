@@ -1,6 +1,6 @@
 <%@ page import="com.example.BoardVO" %>
 \<%@ page language="java" contentType="text/html; charset=UTF-8"
-          pageEncoding="UTF-8"%>
+          pageEncoding="UTF-8"  isELIgnored="false"%>
 
 <%
     BoardVO u = (BoardVO) request.getAttribute("u");
@@ -15,7 +15,7 @@
     <script>
         function delete_ok(id){
             var a = confirm("정말로 삭제하겠습니까?");
-            if(a) location.href='deleteOK/' + id;
+            if(a) location.href='../deleteOK/' + id;
         }
     </script>
 </head>
@@ -28,12 +28,12 @@
 <p>Writer : <%=u.getWriter() %></p>
 <p>Content : <%=u.getContent() %></p>
 <p>Category : <%=u.getCategory() %></p>
-<p>등록일 : <%=u.getRegdate() %> 수정일 : <%=u.getModifydate() %></p>
+<p>등록일 : <%=u.getRegdate() %> 수정일 : <%=u.getModifydate()%></p>
 
 
-<a href="editform.jsp?id=<%=u.getSeq() %>">Edit</a>
+<a href="../editform/${u.getSeq()}">Edit</a>
 <a href="javascript:delete_ok('${u.getSeq()}')">Delete</a><br>
-<a href="posts.jsp">리스트로 돌아가기</a>
+<a href="../list">리스트로 돌아가기</a>
 
 </body>
 </html>
