@@ -1,5 +1,6 @@
 package com.example;
 
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -10,8 +11,39 @@ import java.util.List;
 public class BoardDAO {
 
     @Autowired
-    JdbcTemplate jdbcTemplate;
+    SqlSession sqlSession;
 
+
+    public List<BoardVO> getBoardList() {
+        List<BoardVO> list = sqlSession.selectList("Board.getBoardList");
+        return list;
+    }
+
+    public int insertBoard(BoardVO vo) {
+
+        int num = sqlSession.insert("Board.insertBoard", vo);
+
+        return num;
+    }
+
+    public int deleteBoard(int seq) {
+        int num = sqlSession.delete("Board.deleteBoard", seq);
+        return num;
+    }
+
+    public int updateBoard (BoardVO vo) {
+        int num = sqlSession.update("Board.updateBoard", vo);
+
+        return num;
+    }
+
+
+    public BoardVO getBoard (int seq) {
+        BoardVO list = sqlSession.selectOne("Board.getBoard", seq);
+        return list;
+    }
+
+    /*
     public int insertBoard(BoardVO vo) {
 
         String sql = "INSERT INTO BOARD (title, writer, content, category) VALUES (?, ?, ?, ?)";
@@ -41,4 +73,6 @@ public class BoardDAO {
         String sql = "select * from BOARD order by regdate desc";
         return jdbcTemplate.query(sql, new BoardRowMapper());
     }
+
+     */
 }
