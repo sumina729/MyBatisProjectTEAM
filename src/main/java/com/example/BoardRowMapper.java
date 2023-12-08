@@ -14,6 +14,8 @@ public class BoardRowMapper implements RowMapper<BoardVO> {
         vo.setMeaning(rs.getString("meaning"));
         vo.setExplain(rs.getString("explain"));
         vo.setLevel(rs.getString("level"));
+        vo.setRegdate(rs.getTimestamp("regdate"));
+        vo.setModifydate(rs.getTimestamp("modifydate"));
         return vo;
     }
 }

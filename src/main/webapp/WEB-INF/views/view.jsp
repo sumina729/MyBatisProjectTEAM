@@ -109,10 +109,10 @@
                 <td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
                 --%>
             <p style="font-size: 8ch" class="lead"><%=u.getEnglish() %></p>
-            <p style="font-size: 4ch" class="lead">작성자 : <%=u.getMeaning() %></p>
+            <p style="font-size: 2ch" class="lead">난이도 : <%=u.getLevel() %></p>
+            <p style="font-size: 4ch" class="lead"><%=u.getMeaning() %></p>
             <p style="font-size: 2ch" class="lead"><%=u.getExplain() %></p>
-            <p style="font-size: 2ch" class="lead">구분 : <%=u.getLevel() %></p>
-            <p style="font-size: 1ch" class="lead">등록일 : <%=u.getRegdate() %> 수정일 : <%=u.getModifydate()%></p>
+            <p style="font-size: 1.5ch" class="lead">등록일 : <%=u.getRegdate() %> 수정일 : <%=u.getModifydate()%></p>
 
 
 

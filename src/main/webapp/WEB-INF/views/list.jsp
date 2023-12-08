@@ -156,25 +156,23 @@
       </header>
     </div>
 
+    <div class="add-button container">
+      <a href="add" class="">Add</a>
+    </div>
+
+    <div class="container" style="margin-top: 10px;">
+      <!-- Add 버튼 -->
 
 
-    <div class="table-responsive" style="margin-top: 10px;">
-
-      <table id="list" style="margin-left: 20%; margin-right: 20%;" id="data-table" class="table table-striped table-sm">
+      <table id="list" style="" id="data-table" class="table table-striped table-sm">
 
         <div class="section-title-container">
 
-
-          <!-- Add 버튼 -->
-          <div class="add-button">
-            <a href="add" class="">Add</a>
-          </div>
         </div>
 
           <tr>
             <th>english</th>
             <th>meaning</th>
-            <th>explain</th>
             <th>level</th>
             <th></th>
           </tr>
@@ -182,7 +180,6 @@
             <tr>
               <td><a href="view/${u.getSeq()}">${u.getEnglish()}</a></td>
               <td>${u.getMeaning()}</td>
-              <td>${u.getExplain()}</td>
               <td>${u.getLevel()}</td>
               <td>
                 <a href="editform/${u.getSeq()}" class="modify-button">Edit</a>

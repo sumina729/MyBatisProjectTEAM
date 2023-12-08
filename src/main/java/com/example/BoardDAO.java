@@ -16,6 +16,8 @@ public class BoardDAO {
 
     public List<BoardVO> getBoardList() {
         List<BoardVO> list = sqlSession.selectList("Board.getBoardList");
+        System.out.println(list.get(0).getRegdate());
+        System.out.println(list.get(0).getModifydate());
         return list;
     }
 
