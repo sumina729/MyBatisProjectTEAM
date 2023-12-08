@@ -10,7 +10,7 @@
     </insert>
     <update id="updateBoard">
         update vocabulary
-        set english=#{english}, meaning=#{meaning}, `explain`=#{explain}, level=#{level} where seq=#{seq}
+        set english=#{english}, meaning=#{meaning}, `explain`=#{explain}, level=#{level}, modifydate=#{modifydate} where seq=#{seq}
     </update>
     <delete id="deleteBoard">
         delete from vocabulary where seq=#{seq}

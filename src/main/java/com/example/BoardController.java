@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 @Controller
@@ -59,6 +60,8 @@ public class BoardController {
 
     @RequestMapping(value = "/editok", method = RequestMethod.POST)
     public String editPostOk(BoardVO vo) {
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        vo.setModifydate(timestamp);
         if(boardService.updateBoard(vo) == 0)
             System.out.println("데이터 수정 실패 ");
         else
