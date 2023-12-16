@@ -44,7 +44,7 @@
 
         <label for="lang" class="sr-only">난이도</label>
         <select class="form-control" name="level" id="lang">
-            <option selected>난이도를 선택하세요</option>
+            <option value="0" selected>난이도를 선택하세요</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -76,7 +76,8 @@
             <div style="float:right">
 
                 <p class="text-muted">© 2021 Company, Inc</p>
-            </div>
+            </div>]
+        </div>
     </footer>
 </div>
 

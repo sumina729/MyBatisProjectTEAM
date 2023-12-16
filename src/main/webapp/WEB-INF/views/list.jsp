@@ -11,6 +11,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 
+<%
+  BoardVO u = (BoardVO) request.getAttribute("u");
+%>
+
 
 <html>
   <head>
@@ -137,6 +141,8 @@
     </script>
   </head>
   <body>
+
+
     <h1>나만의 단어장</h1>
 
     <div class="container">
@@ -180,7 +186,10 @@
             <tr>
               <td><a href="view/${u.getSeq()}">${u.getEnglish()}</a></td>
               <td>${u.getMeaning()}</td>
-              <td>${u.getLevel()}</td>
+              <%--<td>${u.getLevel()}</td>--%>
+              <td>
+                ${u.getLevel()}
+              </td>
               <td>
                 <a href="editform/${u.getSeq()}" class="modify-button">Edit</a>
                 <a href="javascript:delete_ok('${u.getSeq()}')" class="delet-button">Delete</a>
@@ -220,36 +229,9 @@
 
             <p class="text-muted">© 2021 Company, Inc</p>
           </div>
-
-
+        </div>
 
       </footer>
     </div>
-
-    <%--<table id="list" width="90%">
-      <tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>Writer</th>
-        <th>Content</th>
-        <th>Category</th>
-        <th>Edit</th>
-        <th>Delete</th>
-      </tr>
-      <c:forEach items="${list}" var="u">
-        <tr>
-          <td>${u.getSeq()}</td>
-          <td><a href="view/${u.getSeq()}">${u.getTitle()}</a></td>
-          <td>${u.getWriter()}</td>
-          <td>${u.getContent()}</td>
-          <td>${u.getCategory()}</td>
-          <td><a href="editform/${u.getSeq()}">Edit</a></td>
-          <td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
-        </tr>
-      </c:forEach>
-    </table>--%>
-
-
-    <br/>
   </body>
 </html>
