@@ -5,4 +5,9 @@
 
 <mapper namespace="Mamber">
 
+    <select id="getUser" resultType="com.example.UserVO" >
+        select userid, username from member
+        where userid = 'admin' and password = password('1234')
+    </select>
+
 </mapper>

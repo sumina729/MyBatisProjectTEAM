@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<p>post.jsp</p>
-<a href="board/list">게시판으로</a>
+<p>나만의 영어 단어장</p>
+<a href="login/login">로그인하러 가기</a>
 </body>
 </html>
