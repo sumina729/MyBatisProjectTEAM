@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: sumin
-  Date: 2023/11/30
-  Time: 11:18 PM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@page import="com.example.BoardDAO, com.example.BoardVO,java.util.*"%>
 <%@page import="com.example.BoardVO"%>
@@ -20,9 +14,8 @@
   <head>
     <title>Title</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<%--    <link rel="stylesheet" href="list.css">--%>
     <style>
-
-
 
       .pagination-container {
         display: flex;
@@ -45,6 +38,7 @@
         background-color: #0d6efd;
         color:#fff !important;
       }
+
       add-button {
         position: absolute;
         top: 0;
@@ -107,20 +101,16 @@
         font-size: 15px;
         text-decoration: none;
         border: none;
-
-
       }
 
       .delet-button:hover {
-
         background-color: #18375a;
       }
-      .modify-button:hover {
 
+      .modify-button:hover {
         background-color:  #959da4;
         color: #fff;
       }
-
 
       table td a {
         color: rgb(0, 0, 0);
@@ -129,8 +119,6 @@
       table td a:hover {
         color:  #6d6c6c;
       }
-
-
     </style>
 
     <script>
@@ -168,8 +156,6 @@
 
     <div class="container" style="margin-top: 10px;">
       <!-- Add 버튼 -->
-
-
       <table id="list" style="" id="data-table" class="table table-striped table-sm">
 
         <div class="section-title-container">
